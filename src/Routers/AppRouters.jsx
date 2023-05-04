@@ -1,9 +1,12 @@
 import {Routes, Route, Navigate} from 'react-router-dom'
+import { LoginPage } from '../Auth/Page/LoginPage'
+import { HomePage } from '../Home/Pages/HomePage'
+import { RegisterPage } from '../Auth/Page/RegisterPage'
 
 export const AppRouters = () => {
 
-
   return (
+
     <>
     
         <Routes>
@@ -17,5 +20,6 @@ export const AppRouters = () => {
         </Routes>
     
     </>
+
   )
 }
