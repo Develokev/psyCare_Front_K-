@@ -1,3 +1,6 @@
+import { FooterBar } from "./Home/Components/FooterBar";
+import NavBarHome from "./Home/Components/NavBarHome";
+import { AppRouters } from "./Routers/AppRouters";
 
 export function App() {
 
@@ -5,15 +8,15 @@ export function App() {
 
     <>
       <header>
-        
+          <NavBarHome /> 
       </header>
 
       <main>
-
+          <AppRouters/>
       </main>
 
       <footer>
-
+          <FooterBar />
       </footer>
     </>
   )

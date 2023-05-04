@@ -1,7 +1,17 @@
-/*TAILWIND IMPORTS */
+/** STYLES 4 ALL */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+/*!TAILWIND IMPORTS */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* +++++++++++++++ */
+/*! +++++++++++++++ */
