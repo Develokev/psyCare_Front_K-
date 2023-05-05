@@ -12,7 +12,7 @@ export function App() {
       </header>
 
       <main>
-          <AppRouters/>
+          <AppRouters />
       </main>
 
       <footer>

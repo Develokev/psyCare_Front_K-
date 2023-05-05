@@ -34,13 +34,13 @@ const navigation = [
                   <div className="flex flex-shrink-0 items-center">
                     
                     <img
-                      className="block h-8 w-auto lg:hidden"
+                      className="block h-10 w-auto lg:hidden"
                       src="\src\assets\core\logo_psyCare_white.png"
                       alt="PsyCare Logo"
                     />
 
                     <img
-                      className="hidden h-8 w-auto lg:block"
+                      className="hidden h-10 w-auto lg:block"
                       src="\src\assets\core\logo_psyCare_white.png"
                       alt="PsyCare Logo"
                     />
@@ -53,7 +53,7 @@ const navigation = [
                           key={item.name}
                           href={item.href}
                           className={classNames(
-                            item.current ? 'bg-cyan-950 text-white' : 'text-gray-300 hover:bg-cyan-900 hover:text-white',
+                            item.current ? 'bg-cyan-950 text-white hover:bg-cyan-900' : 'text-gray-300 hover:bg-cyan-900 hover:text-white',
                             'rounded-md px-3 py-2 text-sm font-medium'
                           )}
                           aria-current={item.current ? 'page' : undefined}
