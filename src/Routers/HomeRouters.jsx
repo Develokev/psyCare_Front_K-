@@ -1,5 +1,3 @@
-import { PrivateRouters } from "./PrivateRouters"
-
 
 export const HomeRouters = () => {
 

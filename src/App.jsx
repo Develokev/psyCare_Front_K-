@@ -1,4 +1,4 @@
-import { FooterBar } from "./Home/Components/FooterBar";
+import { FooterBar } from "./Home/Components";
 import NavBarHome from "./Home/Components/NavBarHome";
 import { AppRouters } from "./Routers/AppRouters";
 
