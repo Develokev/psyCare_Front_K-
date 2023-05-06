@@ -1,17 +1,14 @@
-import { configureStore, combineReducers } from '@reduxjs/toolkit';
+import { configureStore } from '@reduxjs/toolkit';
 import { userSlice } from './Slices/userSlice';
-import { adminSlice } from './Slices/adminSlice';
-import { setLocal } from '../Helpers/localStorage';
+import { adminUserTableSlice } from './Slices/adminUserTableSlice';
+
   
-  const store = configureStore({
+  export const store = configureStore({
 
     reducer: {
 
-        users: userSlice.reducer,
-    },
+        user: userSlice.reducer,
+        userList: adminUserTableSlice.reducer
+    }
 
   });
-  
-  export default store;
-
-store.subscribe(() => setLocal(store.getState()));
