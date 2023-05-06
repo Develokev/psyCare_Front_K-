@@ -12,13 +12,14 @@ export const masterFetch = async (url, method, body = {}) => {
         if (method == "POST" || method == "PUT" || method == "DELETE") {
 
             options = {
-
-                method: method,
+                method,
                 body: JSON.stringify(data),
+                mode: 'cors',
+                cache: 'force-cache',
                 headers: {
-                    "Content-type": "application/json",
+                    'Content-Type': 'application/json'
                 }
-            }
+            };
         }
 
         let respuesta = await fetch(`${urlBase}${url}`, options);

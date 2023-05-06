@@ -17,16 +17,15 @@ export const useAdminUserStore = () => {
         const users = petition.data.rows
 
         console.log('esto es users en useAdmin', users)
-
+       
         dispatch(showUsers(users))
-
-        console.log('esto es user table', userTable)
 
       } catch (error) {
         
         console.log(error)
       }
     }
+    console.log('esto es user table', userTable)
 
   return {
 
