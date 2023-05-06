@@ -1,14 +1,13 @@
 import {Routes, Route, Navigate} from 'react-router-dom'
 import { HomePage } from '../Home/Pages/HomePage'
-import { LoginPage } from '../Auth/Page/LoginPage'
-import { RegisterPage } from '../Auth/Page/RegisterPage'
+import { LoginPage, RegisterPage } from '../Auth/Page'
 
 export const AppRouters = () => {
 
   return (
 
     <>
-
+    
         <Routes>
 
             <Route path='home' element={<HomePage />} />
