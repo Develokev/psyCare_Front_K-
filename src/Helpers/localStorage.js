@@ -8,6 +8,6 @@ export const setLocal = (data) => {
 
 export const getLocal = () => {
 
-    return JSON.parse(localStorage.getItem('data')) || [];
+    return JSON.parse(localStorage.getItem('data')) || {};
 
 }; //!FUNC-GETLOCAL

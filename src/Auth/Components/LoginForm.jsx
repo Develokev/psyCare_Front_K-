@@ -1,30 +1,17 @@
 import { useForm } from "../../Hooks/useForm"
-import {useAuth} from '../../Hooks/useAuth';
-import { useSelector } from "react-redux";
-import { useEffect } from "react";
-import {useNavigate} from 'react-router-dom'
+import { useUserStore } from "../Hooks/useUserStore";
 
 export const LoginForm = () => {
 
     const { handleChange, form } = useForm();
 
-    const { loginStart } = useAuth();
-
-    const auth = useSelector((state) => state.users);
-  
-    useEffect(() => {
-      if (auth.status === "authenticated") {
-        const navigateToHome = useNavigate();
-        navigateToHome("/home");
-      }
-    }, [auth.status]);
+    const {user, errorMessage, loginStart} = useUserStore()
   
     const onSubmit = (ev) => {
-      ev.preventDefault();
-      loginStart(form);
+
+        ev.preventDefault();
+        loginStart(form);
     };
-  
-    console.log("esto es auth", auth);
     
 
   return (
@@ -45,8 +32,8 @@ export const LoginForm = () => {
 
                             <div className="divide-y divide-gray-200">
                                 <div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+                                    
                                     <div className="relative">
-
                                         <input 
                                         onChange={handleChange} 
                                         autoComplete="off" 
@@ -57,10 +44,9 @@ export const LoginForm = () => {
                                         placeholder="Email address" />
 
                                         <label type="email" className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Email Address</label>
-
                                     </div>
-                                    <div className="relative">
 
+                                    <div className="relative">
                                         <input 
                                         onChange={handleChange} 
                                         autoComplete="off" 
@@ -71,18 +57,21 @@ export const LoginForm = () => {
                                         placeholder="Password" />
 
                                         <label type="password" className="absolute left-0 -top-3.5 text-gray-600 text-sm peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-440 peer-placeholder-shown:top-2 transition-all peer-focus:-top-3.5 peer-focus:text-gray-600 peer-focus:text-sm">Password</label>
-
                                     </div>
+
                                     <div>
                                         <label className="inline-flex items-center cursor-pointer"><input id="customCheckLogin" type="checkbox" className="form-checkbox border-0 rounded text-blueGray-700 ml-1 w-5 h-5 ease-linear transition-all duration-150"></input><span className="ml-2 text-sm font-semibold text-blueGray-600">Remember me</span></label>
                                     </div>
+
                                     <div className="relative">
                                         <button className="bg-blue-500 text-white rounded-md px-2 py-1 hover:bg-cyan-950">Access</button>
                                     </div>
+
                                     <div className="text-sm">
                                         <a href="/register" className="text-cyan-500 hover:text-cyan-800">
                                             New account? Register here
                                         </a>
+
                                     </div>
                                 </div>
                             </div>

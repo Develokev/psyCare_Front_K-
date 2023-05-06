@@ -7,7 +7,6 @@ export const userSlice = createSlice({
     initialState: {
 
         user: {},
-        status: 'not-authenticated',
         errorMessage: undefined
     },
 
@@ -15,20 +14,22 @@ export const userSlice = createSlice({
 
         onLogin: (state, action) => {
             
-            console.log('estamos en onLogin')
+            state.user = action.payload,
+            state.errorMessage = undefined
+        },
+
+        onLogout: (state,action) => {
+
+            state.user = {};
+            state.errorMessage = action.payload;
+        },
+
+        onRegister: (state,action) => {
 
             state.user = action.payload;
-            state.status = 'authenticated';
-            state.errorMessage = undefined;
+            state.errorMessage = undefined
         }
-    },
-
-    onLogout: (state,action) => {
-
-        state.user = {};
-        state.status = 'not-authenticated';
-        state.errorMessage = action.payload;
     }
 })
 
-export const { onLogin, onLogout } = userSlice.actions;
+export const { onLogin, onLogout, onRegister } = userSlice.actions;
