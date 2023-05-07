@@ -31,7 +31,7 @@ export const PatientsTable = (userTable) => {
                 </td>
                 <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
                     <span className="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Email</span>
-                    <span className="rounded bg-green-400 py-1 px-3 text-xs font-bold">{email}</span>
+                    <span className="rounded bg-amber-100 py-1 px-3 text-xs font-bold">{email}</span>
                 </td>
                 <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
                     <span className="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Role</span>

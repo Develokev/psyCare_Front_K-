@@ -3,7 +3,7 @@ import { NavBarAdmin } from "../Components/NavBarAdmin"
 import { PatientsTable } from "../Components/PatientsTable"
 import { useAdminUserStore } from "../Hooks/useAdminUserStore"
 
-export const DashboardPage = () => {
+export const UserDashboardPage = () => {
 
     const {userTable, errorMessage, getUsers} = useAdminUserStore()
 
@@ -22,7 +22,7 @@ export const DashboardPage = () => {
     </header>
 
     <div>
-      <p>esto es ADMIN Dashboard</p>
+      <p>Admin Panel</p>
     </div>
 
     <h2 className="text-emerald-800 text-center text-2xl">Patients</h2>
