@@ -39,7 +39,6 @@ export const useAdminUserStore = () => {
       } catch (error) {
         
         console.log('FAILED deletePatient', error)
-
       }
     }
 

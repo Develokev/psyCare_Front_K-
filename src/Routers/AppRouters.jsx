@@ -3,8 +3,9 @@ import { HomePage } from '../Home/Pages/HomePage'
 import { LoginPage, RegisterPage } from '../Auth/Page'
 import { useUserStore } from '../Auth/Hooks/useUserStore'
 import { useEffect } from 'react'
-import { DashboardPage } from '../Private/Pages/DashboardPage'
 import { PatientDashboardPage } from '../Public/Pages/PatientDashboardPage'
+import { UserDashboardPage } from '../Private/Pages/UserDashboardPage'
+import { AppoDashboard } from '../Private/Pages/AppoDashboard'
 
 export const AppRouters = () => {
 
@@ -28,8 +29,8 @@ export const AppRouters = () => {
 
             <Route path='patient-dash' element={<PatientDashboardPage />} />
 
-            <Route path='dashboard' element={<DashboardPage />} />
-
+            <Route path='user-dashboard' element={<UserDashboardPage />} />
+            <Route path='appo-dashboard' element={<AppoDashboard />} />
 
             <Route path='/*' element={<Navigate to={'home'} />} />
 
