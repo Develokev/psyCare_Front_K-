@@ -6,6 +6,7 @@ import { useEffect } from 'react'
 import { PatientDashboardPage } from '../Public/Pages/PatientDashboardPage'
 import { UserDashboardPage } from '../Private/Pages/UserDashboardPage'
 import { AppoDashboard } from '../Private/Pages/AppoDashboard'
+import { AppoEditFormPage } from '../Private/Pages/AppoEditFormPage'
 
 export const AppRouters = () => {
 
@@ -31,6 +32,7 @@ export const AppRouters = () => {
 
             <Route path='user-dashboard' element={<UserDashboardPage />} />
             <Route path='appo-dashboard' element={<AppoDashboard />} />
+            <Route path='appo-edit' element={<AppoEditFormPage />} />
 
             <Route path='/*' element={<Navigate to={'home'} />} />
 
