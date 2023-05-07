@@ -1,4 +1,5 @@
 import { useAdminAppoStore } from "../Hooks/useAdminAppoStore";
+import {Link} from 'react-router-dom'
 
 export const AppoTable = (appoTable) => {
 
@@ -47,13 +48,12 @@ export const AppoTable = (appoTable) => {
                 <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
                     <span className="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Modify</span>
 
-                    <button
-                    type="submit"
+                    <Link to='/appo-edit'
                     className="text-blue-400 hover:text-blue-600 underline">
                         <span className="material-symbols-outlined">
                         edit_note
                         </span>
-                    </button>
+                    </Link>
 
                     <button
                     onClick={onClick}

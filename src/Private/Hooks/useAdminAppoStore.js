@@ -37,8 +37,6 @@ export const useAdminAppoStore = () => {
 
             const newList = newPetition.data.rows
 
-            console.log('esto es newList', newList)
-
             dispatch(deleteAppoReducer(newList))
 
         } catch (error) {
