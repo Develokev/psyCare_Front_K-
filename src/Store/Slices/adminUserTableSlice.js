@@ -13,11 +13,18 @@ export const adminUserTableSlice = createSlice({
     reducers: {
 
         showUsers: (state, action) => {
-            console.log({action})
+
+            state.userTable = action.payload,
+            state.errorMessage = undefined
+        },
+
+        deleteUser: (state,action) => {
+
+            console.log('esto es action en Slice', action)
             state.userTable = action.payload,
             state.errorMessage = undefined
         }
     }
 })
 
-export const {showUsers} = adminUserTableSlice.actions;
+export const {showUsers, deleteUser} = adminUserTableSlice.actions;

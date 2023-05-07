@@ -6,7 +6,7 @@ const navigation = [
 
     { name: 'Dashboard', href: '/dashboard', current: true },
     { name: 'Patients', href: '/dashboard', current: false },
-    { name: 'Logout', href: '/login', current: false },
+    { name: 'Sign out', href: '/login', current: false },
   ]
   
   function classNames(...classes) {
@@ -17,7 +17,7 @@ export const NavBarAdmin = () => {
 
   return (
 
-      <Disclosure as="nav" className="bg-cyan-950">
+      <Disclosure as="nav" className="bg-emerald-900">
         {({ open }) => (
           <>
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -56,7 +56,7 @@ export const NavBarAdmin = () => {
                           key={item.name}
                           href={item.href}
                           className={classNames(
-                            item.current ? 'bg-cyan-950 text-white hover:bg-cyan-900' : 'text-gray-300 hover:bg-cyan-900 hover:text-white',
+                            item.current ? 'bg-emerald-900 text-white hover:bg-cyan-900' : 'text-gray-300 hover:bg-cyan-900 hover:text-white',
                             'rounded-md px-3 py-2 text-sm font-medium'
                           )}
                           aria-current={item.current ? 'page' : undefined}
@@ -68,25 +68,25 @@ export const NavBarAdmin = () => {
                   </div>
                 </div>
                 <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                  {/* <button
+                  <button
                     type="button"
                     className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                   >
                     <span className="sr-only">View notifications</span>
                     <BellIcon className="h-6 w-6" aria-hidden="true" />
-                  </button> */}
+                  </button>
   
                   {/* Profile dropdown */}
                   <Menu as="div" className="relative ml-3">
                     <div>
-                      {/* <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                      <Menu.Button className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                         <span className="sr-only">Open user menu</span>
                         <img
                           className="h-8 w-8 rounded-full"
-                          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                          alt=""
+                          src="https://t.ly/SVHy"
+                          alt="randomUser"
                         />
-                      </Menu.Button> */}
+                      </Menu.Button>
                     </div>
                     <Transition
                       as={Fragment}
