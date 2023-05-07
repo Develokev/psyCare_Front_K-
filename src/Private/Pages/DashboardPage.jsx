@@ -25,7 +25,7 @@ export const DashboardPage = () => {
       <p>esto es ADMIN Dashboard</p>
     </div>
 
-    <h2>Patients</h2>
+    <h2 className="text-emerald-800 text-center text-2xl">Patients</h2>
 
     <table className="border-collapse w-full">
         <thead>
@@ -35,7 +35,7 @@ export const DashboardPage = () => {
                 <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Last Name</th>
                 <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Email</th>
                 <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Role</th>
-                <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Edit</th>
+                <th className="p-3 font-bold uppercase bg-gray-200 text-gray-600 border border-gray-300 hidden lg:table-cell">Modify</th>
             </tr>
         </thead>
 
@@ -45,6 +45,7 @@ export const DashboardPage = () => {
         userTable.map(item => (
             
             <PatientsTable
+            key={item.id}
             {...item}
             />
         ))
