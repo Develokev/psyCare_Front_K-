@@ -1,5 +1,4 @@
 import { useAdminAppoStore } from "../Hooks/useAdminAppoStore";
-import {Link} from 'react-router-dom'
 
 export const AppoTable = (appoTable) => {
 
@@ -24,43 +23,44 @@ export const AppoTable = (appoTable) => {
 
     <>
             <tr className="bg-white lg:hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap mb-10 lg:mb-0">
-                <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
-                    <span className="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Appo ID</span>
-                    {appo_id}
-                </td>
-                <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
-                    <span className="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Name</span>
-                    {apponame}
-                </td>
-                <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
-                    <span className="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Date</span>
-                    {appodate}
-                </td>
-                <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
-                    <span className="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Time</span>
-                    <span className="rounded bg-amber-100 py-1 px-3 text-xs font-bold">{appotime}</span>
-                </td>
-                <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
-                    <span className="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Type</span>
-                    {appotype}
-                </td>
+
                 <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
                     <span className="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Patient</span>
                     {name} {last_name}
                 </td>
+
+                <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
+                    <span className="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Name</span>
+                    {apponame}
+                </td>
+
+                <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
+                    <span className="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Date</span>
+                    {appodate}
+                </td>
+
+                <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
+                    <span className="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Time</span>
+                    <span className="rounded bg-amber-100 py-1 px-3 text-xs font-bold">{appotime}</span>
+                </td>
+
+                <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
+                    <span className="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Type</span>
+                    {appotype}
+                </td>
+
                 <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
                     <span className="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Status</span>
                     <span className="rounded bg-slate-400 py-1 px-3 text-xs font-bold">{status}</span>
                 </td>
+
+                <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
+                    <span className="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Appo ID</span>
+                    {appo_id}
+                </td>
+
                 <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
                     <span className="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Modify</span>
-
-                    {/* <Link to='/appo-edit/'
-                    className="text-blue-400 hover:text-blue-600 underline">
-                        <span className="material-symbols-outlined">
-                        edit_note
-                        </span>
-                    </Link> */}
 
                     <button
                     onClick={onClickUpdate}
@@ -79,7 +79,7 @@ export const AppoTable = (appoTable) => {
                         delete_forever
                         </span>
                     </button>
-                </td>
+                </td>     
             </tr>
     </>
   )

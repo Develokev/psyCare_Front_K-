@@ -27,7 +27,7 @@ export const useUserStore = () => {
     
             dispatch(onLogin(user))
 
-            navigate("/patient-dash");
+            navigate("/user-dashboard");
     
         } catch (error) {
             

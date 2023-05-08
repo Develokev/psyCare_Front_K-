@@ -13,8 +13,6 @@ export const AppoDashboardPage = () => {
   
       }, [])
 
-      console.log(appoTable);
-
   return (
 
     <>

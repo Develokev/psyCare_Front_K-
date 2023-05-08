@@ -5,7 +5,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 const navigation = [
 
     { name: 'Dashboard', href: '/patient-dash', current: true },
-    { name: 'New Appointment', href: '/patient-dash', current: false },
+    { name: 'New Appointment', href: '/new-appointment', current: false },
     { name: 'Online Session', href: 'https://meet.google.com/?authuser=0', current: false },
     { name: 'Sign out', href: '/login', current: false },
   ]
@@ -109,20 +109,11 @@ export const NavBarPatient = () => {
                             </a>
                             )}
                         </Menu.Item>
+        
                         <Menu.Item>
                             {({ active }) => (
                             <a
-                                href="#"
-                                className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                            >
-                                Settings
-                            </a>
-                            )}
-                        </Menu.Item>
-                        <Menu.Item>
-                            {({ active }) => (
-                            <a
-                                href="#"
+                                href="/home"
                                 className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                             >
                                 Sign out
