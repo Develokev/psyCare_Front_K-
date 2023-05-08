@@ -3,10 +3,11 @@ import { AppoTable } from "../Components/AppoTable"
 import { NavBarAdmin } from "../Components/NavBarAdmin"
 import { useAdminAppoStore } from "../Hooks/useAdminAppoStore"
 
-export const AppoDashboard = () => {
+export const AppoDashboardPage = () => {
 
     const {appoTable, errorMessage, getAppos} = useAdminAppoStore()
-    console.log('estamos en appoDashboard')
+
+    console.log({appoTable})
     
     useEffect(() => {
 
