@@ -22,6 +22,8 @@ export const AppoEditForm = ({state}) => {
     <div className="flex items-center justify-center p-12">
         <div className="mx-auto w-full max-w-[550px]">
 
+          <span></span>
+
           <form>
             <div className="-mx-3 flex flex-wrap">
                 <div className="w-full px-3 sm:w-1/2">
@@ -55,6 +57,7 @@ export const AppoEditForm = ({state}) => {
                     type="date"
                     name="appodate"
                     id="date"
+                    defaultValue={state.appodate}
                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                   />
                 </div>
@@ -71,6 +74,7 @@ export const AppoEditForm = ({state}) => {
                     type="time"
                     name="appotime"
                     id="time"
+                    defaultValue={state.appotime}
                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                   />
                 </div>
@@ -78,20 +82,20 @@ export const AppoEditForm = ({state}) => {
             </div>
             
             <div className="mb-5">
-              <label className="mb-3 block text-base font-medium text-[#07074D]">
-                Session type
-              </label>
-              <div className="flex items-center space-x-6">
-                <div className="flex items-center">
-                  <input
+                <label className="mb-3 block text-base font-medium text-[#07074D]">
+                  Session type
+                </label>
+                <div className="flex items-center space-x-6">
+                  <div className="flex items-center">
+                    <input
                     onChange={handleChange}
                     type="radio"
                     name="appotype"
                     id="radioButton1"
                     className="h-5 w-5"
                     value='online'
-                  />
-                  <label
+                    />
+                <label
                     className="pl-1 text-base font-medium text-[#07074D]">
                     online
                   </label>
@@ -120,7 +124,8 @@ export const AppoEditForm = ({state}) => {
                   <select 
                   onChange={handleChange}
                   name="status_id" 
-                  id="countries" 
+                  id="countries"
+                  defaultValue={state.appostatus}
                   className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                   <option>Choose a status</option>
                   <option value="1">Pending</option>
@@ -134,7 +139,7 @@ export const AppoEditForm = ({state}) => {
             <div>
               <button
                 onClick={onClick}
-                className="hover:shadow-form rounded-md bg-teal-600 hover:bg-emerald-700 py-3 px-8 text-center text-base font-semibold text-white outline-none"
+                className="hover:shadow-form rounded-md bg-teal-600 hover:bg-emerald-700 py-3 px-8 text-center text-base mt-3 font-semibold text-white outline-none"
               >
                 Submit
               </button>

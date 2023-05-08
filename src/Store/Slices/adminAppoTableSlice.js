@@ -20,7 +20,6 @@ export const adminAppoTableSlice = createSlice({
 
         showAppo : (state,action) => {
 
-            console.log('esto es appoID action en slice', action)
             state.appoTable = action.payload,
             state.errorMessage = undefined
         },
@@ -33,7 +32,6 @@ export const adminAppoTableSlice = createSlice({
 
         updateAppoReducer: (state, action) => {
 
-            console.log('esto es update action en slice', action)
             state.appoTable = action.payload,
             state.errorMessage = undefined
         }

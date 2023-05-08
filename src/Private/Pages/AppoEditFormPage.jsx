@@ -6,9 +6,6 @@ import { useAdminAppoStore } from "../Hooks/useAdminAppoStore"
 export const AppoEditFormPage = () => {
 
     const {appoTable, errorMessage} = useAdminAppoStore()
-    
-    console.log({appoTable})
-
 
   return (
 
