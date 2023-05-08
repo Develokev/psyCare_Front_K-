@@ -4,13 +4,20 @@ import {Link} from 'react-router-dom'
 export const AppoTable = (appoTable) => {
 
     const {appo_id,apponame,appodate,appotime,appotype,name,last_name,status} = appoTable
-    const {errorMessage, deleteAppo} = useAdminAppoStore()
+    const {errorMessage, deleteAppo, getAppo} = useAdminAppoStore()
 
     const onClick = (ev) => {
 
         ev.preventDefault();
 
         deleteAppo(appo_id)
+    }
+
+    const onClickUpdate = (ev) => {
+
+        ev.preventDefault();
+
+        getAppo(appo_id)
     }
 
   return (
@@ -48,12 +55,21 @@ export const AppoTable = (appoTable) => {
                 <td className="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
                     <span className="lg:hidden absolute top-0 left-0 bg-blue-200 px-2 py-1 text-xs font-bold uppercase">Modify</span>
 
-                    <Link to='/appo-edit'
+                    {/* <Link to='/appo-edit/'
                     className="text-blue-400 hover:text-blue-600 underline">
                         <span className="material-symbols-outlined">
                         edit_note
                         </span>
-                    </Link>
+                    </Link> */}
+
+                    <button
+                    onClick={onClickUpdate}
+                    type="submit"
+                    className="text-blue-400 hover:text-blue-600 underline">
+                        <span className="material-symbols-outlined">
+                        edit_note
+                        </span>
+                    </button>
 
                     <button
                     onClick={onClick}
