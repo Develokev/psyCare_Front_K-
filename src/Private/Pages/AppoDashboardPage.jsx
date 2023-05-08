@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { AppoTable } from "../Components/AppoTable"
 import { NavBarAdmin } from "../Components/NavBarAdmin"
 import { useAdminAppoStore } from "../Hooks/useAdminAppoStore"
@@ -6,14 +6,14 @@ import { useAdminAppoStore } from "../Hooks/useAdminAppoStore"
 export const AppoDashboardPage = () => {
 
     const {appoTable, errorMessage, getAppos} = useAdminAppoStore()
-
-    console.log({appoTable})
     
     useEffect(() => {
 
         getAppos()
   
       }, [])
+
+      console.log(appoTable);
 
   return (
 
@@ -45,14 +45,18 @@ export const AppoDashboardPage = () => {
 
         <tbody>
 
-    {
+    {appoTable.length > 1 ? (
+        
         appoTable.map(item => (
             
             <AppoTable
-            key={item.id}
+            key={item.appo_id}
             {...item}
             />
         ))
+    ) : (
+        null
+    )
     }
         </tbody>
     </table>
