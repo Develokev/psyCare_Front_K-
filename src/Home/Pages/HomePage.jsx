@@ -21,10 +21,10 @@ export const HomePage = () => {
 
             <div className="relative inline-grid grid-cols-1 grid-rows-1 gap-12 overflow-hidden">
               <span className="animate-word-delay-3 col-span-full row-span-full">Sanitary</span>
-              <span className="animate-word col-span-full row-span-full">For the mind</span>
-              <span className="animate-word-delay-1 col-span-full row-span-full">For the soul</span>
-              <span className="animate-word-delay-2 col-span-full row-span-full">From home</span>
-              <span className="animate-word-delay-4 col-span-full row-span-full">Face-to-face</span>
+              <span className="animate-word col-span-full row-span-full">for the mind</span>
+              <span className="animate-word-delay-1 col-span-full row-span-full">for the soul</span>
+              <span className="animate-word-delay-2 col-span-full row-span-full">from home</span>
+              <span className="animate-word-delay-4 col-span-full row-span-full">face-to-face</span>
             </div>
 
           </div>

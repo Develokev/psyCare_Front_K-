@@ -31,9 +31,10 @@ export const PatientDashboardPage = () => {
           <p className="text-xs text-justify text-gray-400 mt-4"> Las técnicas psicológicas que forman parte de mi “saber hacer” me permiten ayudar a las personas a superar diversos problemas psicológicos, normalmente caracterizados por síntomas de ansiedad, depresión, estrés, conductas adictivas y desregulación emocional, entre otros. En general, mi trabajo se centra en ayudar a las personas a superar los problemas que subyacen al malestar psicológico, que dificulta vivir la vida en libertad y de manera plena y consciente.
           </p>
 
-          <button className="bg-emerald-600 hover:bg-emerald-900 px-8 py-2 mt-8 rounded-3xl text-gray-100 font-semibold uppercase tracking-wide">⦁	BIDI CODE  </button>
+          <div className="centerDiv">
+            <Link to="/bidi" className="bg-emerald-600 hover:bg-emerald-900 px-8 py-2 mt-8 rounded-3xl text-gray-100 font-semibold uppercase tracking-wide">⦁	BIDI CODE  </Link>
+          </div>
           <h3 className="text-sm text-gray-600 ">Colegio Oficial de la Psicología de Madrid</h3>
-
         </article>
 
       </section>
@@ -52,7 +53,7 @@ export const PatientDashboardPage = () => {
                   <p className="text-center">Therapy Specifics</p>
                   </Link> 
 
-                  <Link to="#" className="rounded-lg bg-cyan-800 px-3 py-2 text-base m-1 font-medium text-white transition duration-200 hover:bg-cyan-950 active:bg-cyan-800">
+                  <Link to="https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673" className="rounded-lg bg-cyan-800 px-3 py-2 text-base m-1 font-medium text-white transition duration-200 hover:bg-cyan-950 active:bg-cyan-800">
                   <p className="text-center">Data Protection</p>
                   </Link> 
 

@@ -1,4 +1,3 @@
-import { useEffect } from "react"
 import { AppoEditForm } from "../Components/AppoEditForm"
 import { NavBarAdmin } from "../Components/NavBarAdmin"
 import { useAdminAppoStore } from "../Hooks/useAdminAppoStore"
@@ -15,7 +14,7 @@ export const AppoEditFormPage = () => {
           <NavBarAdmin />
       </header>
 
-      <div>
+      <div className="centerDiv">
         <p>Admin Panel</p>
       </div>
 

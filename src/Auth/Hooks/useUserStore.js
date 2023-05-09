@@ -27,7 +27,7 @@ export const useUserStore = () => {
     
             dispatch(onLogin(user))
 
-            navigate("/user-dashboard");
+            navigate("/patient-dash");
     
         } catch (error) {
             
@@ -64,6 +64,28 @@ export const useUserStore = () => {
         dispatch(onLogin(userLocalData))
     }
 
+    const getUser = async () => {
+
+        try {
+
+            const localData = getLocal()
+
+            const email = localData.email
+            
+            const petition = await masterFetch(`/auth/${email}`)
+
+            const patientState = petition.data
+
+            dispatch(onLogin(petition))
+            
+
+        } catch (error) {
+            
+            console.log(error)
+
+        }
+    }
+
 
   return {
 
@@ -71,6 +93,7 @@ export const useUserStore = () => {
     errorMessage,
     loginStart,
     registerStart,
-    roleCheck
+    roleCheck,
+    getUser
   }
 }
