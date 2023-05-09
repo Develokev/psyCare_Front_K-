@@ -11,6 +11,7 @@ import { NewAppoPage } from '../Public/Pages/NewAppoPage'
 import { HomeRouters } from './HomeRouters'
 import { PrivateRouters } from './PrivateRouters'
 import { PublicRouters } from './PublicRouters'
+import { BidiCodePage } from '../Public/Pages/BidiCodePage'
 
 export const AppRouters = () => {
 
@@ -31,20 +32,21 @@ export const AppRouters = () => {
             <Route path='login' element={<LoginPage />} />
             <Route path='register' element={<RegisterPage />} />
 
-        <Route element={<PublicRouters />}>
+        {/* <Route element={<PublicRouters />}> */}
 
             <Route path='patient-dash' element={<PatientDashboardPage />} />
+            <Route path='bidi' element={<BidiCodePage />} />
             <Route path='new-appointment' element={<NewAppoPage />} />
 
-        </Route>
+        {/* </Route> */}
 
-        <Route element={<PrivateRouters />}>
+        {/* <Route element={<PrivateRouters />}> */}
 
             <Route path='user-dashboard' element={<UserDashboardPage />} />
             <Route path='appo-dashboard' element={<AppoDashboardPage />} />
             <Route path='appo-edit' element={<AppoEditFormPage />} />
 
-        </Route>
+        {/* </Route> */}
             
             <Route path='/*' element={<Navigate to={'home'} />} />
 
