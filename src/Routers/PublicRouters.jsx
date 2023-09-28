@@ -18,8 +18,8 @@ export const PublicRouters = () => {
 
   console.log('esto e user.role', user.role)
 
-    if(user.role === 'patient') {
-      return <Navigate to={'/patient-dash'} />
+    if(user.role != 'patient') {
+      return <Navigate to={'/'} />
     }
 
   return (
